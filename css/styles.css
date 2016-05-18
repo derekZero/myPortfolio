@@ -94,8 +94,25 @@ html, body {
 	border: 0.1em solid white;
 }
 
+@media screen and (max-width: 768px) {
+	.titleOne {right: 41vw;}
+	.titleTwo {right: 21vw;}
+}
+
+@media screen and (max-width: 425px) {
+	.titleOne {right: 29vw;}
+	.titleTwo {right: 9vw;}
+}
+
 @media screen and (max-width: 375px) {
 	.about {border: 0.1em solid white; right: 38vw;}
 	.title {font-size: 16pt;}
+	.titleOne {right: 38vw;}
+	.titleTwo {right: 18vw;}
 	.work {border: 0.1em solid white; right: 38vw;}
+}
+
+@media screen and (max-width: 320px) {
+	.titleOne {right: 38vw;}
+	.titleTwo {right: 18vw;}
 }

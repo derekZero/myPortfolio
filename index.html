@@ -29,13 +29,23 @@ Version:		1.0<!DOCTYPE html>
 
 </head>
 <body>
-	<div class="about">about</div>
-	<div class="title">
-		<div class="titleOne">Derek Guzman</div><br>
-		<div class="slash">/</div><br>
-		<div class="titleTwo">Web Developer</div>
-	</div>
-	<div class="work">work</div>
+	<a id="about" name="about">
+		<a href="#home" id="homeOne" class="homeOne">Home</a>
+	</a>
+
+	<a id="home" name="home" class="home">
+		<a href="#about" class="about">about</a>
+		<div class="title">
+			<div class="titleOne">Derek Guzman</div><br>
+			<div class="slash">/</div><br>
+			<div class="titleTwo">Web Developer</div>
+		</div>
+		<a href="#" class="work">work</a>
+	</a>
+
+	<a id="work" name="work">
+		<a href="#home" id="homeTwo" class="homeTwo">Home</a>
+	</a>
 
 	<script type="text/javascript" src="js/scripts.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>

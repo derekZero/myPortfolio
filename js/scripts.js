@@ -1,10 +1,17 @@
+/*
+Name:			scripts.js
+Written by:		Derek Guzman
+Version:		1.0
+*/
+
+$("html, body").animate({scrollTop: $("#home").offset().top}, 1);
 $(document).ready(function() {
 	$(".about").animate({
-			top: "10vh"
-		}, 1000, function() {});
+			top: "110vh"
+		}, 500, function() {});
 	$(".work").animate({
-			bottom: "10vh"
-		}, 1000, function() {});
+			top: "185vh"
+		}, 500, function() {});
 	if($(window).width() > 768){
 		$(".titleOne").animate({
 			opacity: 1,
@@ -70,4 +77,24 @@ $(document).ready(function() {
 			right: "28vw"
 		}, 1000, function() {});
 	}
+	$(".homeOne").click(function(){
+		$("html, body").animate({
+			scrollTop: $('#home').offset().top
+		}, 1000);
+	});
+	$(".about").click(function(){
+		$("html, body").animate({
+			scrollTop: $('#about').offset().top
+		}, 1000);
+	});
+	$(".work").click(function(){
+		$("html, body").animate({
+			scrollTop: $('#work').offset().top
+		}, 1000);
+	});
+	$(".homeTwo").click(function(){
+		$("html, body").animate({
+			scrollTop: $('#home').offset().top
+		}, 1000);
+	});
 });

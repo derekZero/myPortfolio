@@ -17,7 +17,8 @@ html {
 }
 
 body {
-	background-color: #5698FA;
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
@@ -29,33 +30,93 @@ html, body {
 	padding: 0;
 }
 
-.about {
+a {
+	text-decoration: none;
+}
+
+#about {
+	background-color: white;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.homeOne {
 	border: none;
-	color: white;
+	color: #19E0FF;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 16pt;
 	margin: 0;
 	padding: 1em;
 	position: absolute;
 	right: 40vw;
 	text-align: center;
-	top: -15vh;
+	top: 85vh;
+	width: 15vw;
+}
+
+.homeOne:hover {
+	box-shadow: 0 0 0 0.1em;
+	transition: all 0.5s;
+}
+
+#home {
+	background-color: #19E0FF;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100vh;
+	width: 100vw;
+}
+
+.home {
+	background-color: #19E0FF;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100vh;
+	width: 100vw;
+}
+
+.about {
+	border: none;
+	color: white;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16pt;
+	margin: 0;
+	padding: 1em;
+	position: absolute;
+	right: 40vw;
+	text-align: center;
+	top: 85vh;
 	width: 15vw;
 }
 
 .about:hover {
-	border: 0.1em solid white;
-	transition: border 1s;
+	box-shadow: 0 0 0 0.1em;
+	transition: all 0.5s;
 }
 
 .title {
 	color: white;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 25pt;
 	font-weight: 200;
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 35vh;
+	top: 135vh;
 	width: 100vw;
 }
 
@@ -79,19 +140,51 @@ html, body {
 
 .work {
 	border: none;
-	bottom: -15vh;
+	box-sizing: border-box;
 	color: white;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 16pt;
 	margin: 0;
 	padding: 1em;
 	position: absolute;
 	right: 40vw;
 	text-align: center;
+	top: 215;
 	width: 15vw;
 }
 
 .work:hover {
-	border: 0.1em solid white;
+	box-shadow: 0 0 0 0.1em;
+	transition: all 0.5s;
+}
+
+#work {
+	background-color: white;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 200vh;
+	width: 100vw;
+}
+
+.homeTwo {
+	border: none;
+	color: #19E0FF;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16pt;
+	margin: 0;
+	padding: 1em;
+	position: absolute;
+	right: 40vw;
+	text-align: center;
+	top: 215vh;
+	width: 15vw;
+}
+
+.homeTwo:hover {
+	box-shadow: 0 0 0 0.1em;
+	transition: all 0.5s;
 }
 
 @media screen and (max-width: 768px) {

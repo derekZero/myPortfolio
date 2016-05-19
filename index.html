@@ -20,6 +20,10 @@ Version:		1.0<!DOCTYPE html>
 
 	<link rel="stylesheet" href="css/styles.css">
 
+	<!-- Font Awesome icons -->
+
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
 	<!-- jQuery -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -30,7 +34,41 @@ Version:		1.0<!DOCTYPE html>
 </head>
 <body>
 	<a id="about" name="about">
-		<a href="#home" id="homeOne" class="homeOne">Home</a>
+		<div class="desc">about me</div>
+		<div class="aboutBoth">
+			<div class="aboutLeft">
+				<div class="pic"></div>
+				<div class="content">
+					<p>I'm a 24 year-old front-end web developer.</p>
+					<p>I focus on mobile responsivity and UX engagement.</p>
+					<p>I can solve a Rubix Cube in less than two minutes.</p>
+					<p>I read every day to expand what I can do.</p>
+				</div>
+				<div class="resume"><p>Download Resume</p></div>
+			</div>
+			<div class="aboutRight">
+				<div class="icons">
+					<i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i>
+					<i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i>
+					<i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i>
+					<i class="fa fa-instagram fa-5x" aria-hidden="true" id ="gram"></i>
+				</div>
+				<div class="artists">
+					<p id="listen">WHAT I'M LISTENING TO</p>
+					<div class="artRow">
+						<div class="art"></div>
+						<div class="art"></div>
+						<div class="art"></div>
+					</div>
+					<div class="artRowTwo">
+						<div class="art"></div>
+						<div class="art"></div>
+						<div class="art"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#home" id="homeOne" class="homeOne">home</a>
 	</a>
 
 	<a id="home" name="home" class="home">
@@ -44,7 +82,7 @@ Version:		1.0<!DOCTYPE html>
 	</a>
 
 	<a id="work" name="work">
-		<a href="#home" id="homeTwo" class="homeTwo">Home</a>
+		<a href="#home" id="homeTwo" class="homeTwo">home</a>
 	</a>
 
 	<script type="text/javascript" src="js/scripts.js"></script>

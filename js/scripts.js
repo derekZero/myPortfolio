@@ -4,6 +4,13 @@ Written by:		Derek Guzman
 Version:		1.0
 */
 
+$body = $("body");
+
+$(document).on({
+	ajaxStart: function() {$body.addClass("loading");},
+	ajaxStop: function() {$body.removeClass("loading");}
+});
+
 $("html, body").animate({scrollTop: $("#home").offset().top}, 1);
 $(document).ready(function() {
 	$(".about").animate({
@@ -96,5 +103,29 @@ $(document).ready(function() {
 		$("html, body").animate({
 			scrollTop: $('#home').offset().top
 		}, 1000);
+	});
+	$(".button:nth-child(1)").click(function(){
+		$(".slide").queue(function(){
+			$(".slide").animate({right:"90vw"}).dequeue();
+		});
+		$(".slide:nth-child(1)").animate({right:"0"});
+	});
+	$(".button:nth-child(2)").click(function(){
+		$(".slide").queue(function(){
+			$(".slide").animate({right:"90vw"}).dequeue();
+		});
+		$(".slide:nth-child(2)").animate({right:"0"});
+	});
+	$(".button:nth-child(3)").click(function(){
+		$(".slide").queue(function(){
+			$(".slide").animate({right:"90vw"}).dequeue();
+		});
+		$(".slide:nth-child(3)").animate({right:"0"});
+	});
+	$(".button:nth-child(4)").click(function(){
+		$(".slide").queue(function(){
+			$(".slide").animate({right:"90vw"}).dequeue();
+		});
+		$(".slide:nth-child(4)").animate({right:"0"});
 	});
 });

@@ -1,109 +1,164 @@
 <!--
-Name:			index.html
-Written by:		Derek Guzman
-Version:		1.0<
+Name:                   index.html
+Written by:             Derek Guzman
+Version:                1.0<
 -->
-
 <!DOCTYPE html>
-
-<head>
-	<title>Derek Guzman's Web Developer Portfolio</title>
-
-	<!-- Meta Data -->
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="professional, web, developer, front-end, css, html, javascript, jquery" />
-	<meta name="description" content="Derek Guzman's Official portoflio.">
-	<meta name="author" content="Derek Guzman">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<!-- External CSS -->
-
-	<link rel="stylesheet" href="css/styles.css">
-
-	<!-- Font Awesome icons -->
-
-	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-
-	<!-- jQuery -->
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
- 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-</head>
-<body>
-	<a id="about" name="about">
-		<div class="desc">about me</div>
-		<div class="aboutBoth">
-			<div class="aboutLeft">
-				<div class="pic"></div>
-				<div class="content">
-					<p>I'm a 24 year-old front-end web developer.</p>
-					<p>I focus on mobile responsivity and UX engagement.</p>
-					<p>I can solve a Rubix Cube in less than two minutes.</p>
-					<p>I read every day to expand what I can do.</p>
-				</div>
-				<div class="resume"><p>Download Resume</p></div>
-			</div>
-			<div class="aboutRight">
-				<div class="icons">
-					<i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i>
-					<i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i>
-					<i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i>
-					<i class="fa fa-instagram fa-5x" aria-hidden="true" id ="gram"></i>
-				</div>
-				<div class="artists">
-					<p id="listen">WHAT I'M LISTENING TO</p>
-					<div class="artRow">
-						<div class="art"><p>Lindsey Sterling</p></div>
-						<div class="art"><p>Justice</p></div>
-						<div class="art"><p>William Fitzsimmons</p></div>
-					</div>
-					<div class="artRowTwo">
-						<div class="art"><p>Daft Punk</p></div>
-						<div class="art"><p>The Weeknd</p></div>
-						<div class="art"><p>Digitalism</p></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a href="#home" id="homeOne" class="homeOne">home</a>
-	</a>
-
-	<a id="home" name="home" class="home">
-		<a href="#about" class="about">about</a>
-		<div class="title">
-			<div class="titleOne">Derek Guzman</div><br>
-			<div class="slash">/</div><br>
-			<div class="titleTwo">Web Developer</div>
-		</div>
-		<a href="#" class="work">work</a>
-	</a>
-
-	<a id="work" name="work">
-		<a href="#home" id="homeTwo" class="homeTwo">home</a>
-		<div class="buttons">
-			<div class="button"><i class="fa fa-code fa-5x" aria-hidden="true"></i></div>
-			<div class="button"><i class="fa fa-github-alt fa-5x" aria-hidden="true"></i></div>
-			<div class="button"></div>
-			<div class="button"><i class="fa fa-coffee fa-5x" aria-hidden="true"></i></div>
-		</div>
-		<div class="slideHold">
-			<div class="slide"></div>
-			<div class="slide"></div>
-			<div class="slide"></div>
-			<div class="slide"></div>
-		</div>
-		<div class="workIcon"><i class="fa fa-fighter-jet fa-5x" aria-hidden="true"></i></div>
-		<div class="descTwo">work</div>
-	</a>
-
-	<div class="modal"></div>
-
-	<script type="text/javascript" src="js/scripts.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-</body>
+<html>
+    <head>
+        <title>
+            Derek Guzman's Web Developer Portfolio
+        </title>
+        <!-- Meta Data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="professional, web, developer, front-end, css, html, javascript, jquery">
+        <meta name="description" content="Derek Guzman's Official portoflio.">
+        <meta name="author" content="Derek Guzman">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- External CSS -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css"
+        ><!-- jQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+</script>
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript">
+</script> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <a id="about"><div id="aboutView"></div>
+        <div class="desc">
+            about me
+        </div>
+        <div class="aboutBoth">
+            <div class="aboutLeft">
+                <div class="pic"><div class="opaque"></div></div>
+                <div class="content">
+                    <p>
+                        I'm a 24 year-old front-end web developer.
+                    </p>
+                    <p>
+                        I focus on mobile responsivity and UX engagement.
+                    </p>
+                    <p>
+                        I can solve a Rubix Cube in less than two minutes.
+                    </p>
+                    <p>
+                        I read every day to expand what I can do.
+                    </p>
+                </div>
+                <div class="contact">
+                    <div class="contactC"></div>
+                    <i class="fa fa-optin-monster fa-3x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="aboutRight">
+                <div class="icons">
+                    <i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
+                </div>
+                <div class="artists">
+                    <p id="listen">
+                        WHAT I'M LISTENING TO
+                    </p>
+                    <div class="artRow">
+                        <div class="art">
+                            <p>
+                                Lindsey Sterling
+                            </p>
+                        </div>
+                        <div class="art">
+                            <p>
+                                Justice
+                            </p>
+                        </div>
+                        <div class="art">
+                            <p>
+                                William Fitzsimmons
+                            </p>
+                        </div>
+                    </div>
+                    <div class="artRowTwo">
+                        <div class="art">
+                            <p>
+                                Daft Punk
+                            </p>
+                        </div>
+                        <div class="art">
+                            <p>
+                                The Weeknd
+                            </p>
+                        </div>
+                        <div class="art">
+                            <p>
+                                Digitalism
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></a><a href="#home" id="homeOne" class="homeOne">home</a> <a id="home">
+        <div class="homeView"></div></a> <a href="#about" class="about">about</a>
+        <div class="title">
+            <div class="titleOne">
+                Derek Guzman
+            </div><br>
+            <div class="slash">
+                /
+            </div><br>
+            <div class="titleTwo">
+                Web Developer
+            </div>
+        </div><a href="#work" class="work">work</a> <a id="work">
+        <div class="workView">
+            <a href="#home" id="homeTwo" class="homeTwo">home</a>
+            <div class="buttons">
+                <div class="button"><i class="fa fa-desktop fa-4x" aria-hidden="true"></i></div>
+                <div class="button"><i class="fa fa-code fa-4x" aria-hidden="true"></i></div>
+                <div class="button"><i class="fa fa-hand-spock-o fa-4x" aria-hidden="true"></i></div>
+                <div class="button"><i class="fa fa-coffee fa-4x" aria-hidden="true"></i></div>
+            </div>
+            <div class="slideHold">
+                <div class="slide">
+                    <div class="webPic"></div>
+                    <div class="webDesc">
+                        <h1>
+                            Hire Me
+                        </h1>
+                        <p>
+                            Hire Me is a portfolio template with photographers in mind.
+                        </p>
+                        <p>
+                            I'm responsible for 100% of the code in it's creation.
+                        </p>
+                        <p>
+                            It looks great on desktop.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide"></div>
+                <div class="slide">
+                    <div class="quads">
+                        <div class="quad"></div>
+                        <div class="quad"></div>
+                    </div>
+                    <div class="quads">
+                        <div class="quad"></div>
+                        <div class="quad"></div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="prac"></div>
+                </div>
+                <div class="slide"></div>
+            </div>
+            <div class="workIcon"></div>
+            <div class="descTwo">
+                work
+            </div>
+        </div>
+        <div class="modal"></div><script type="text/javascript" src="js/scripts.js">
+</script> <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js">
+</script></a>
+    </body>
 </html>

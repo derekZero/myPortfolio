@@ -27,13 +27,19 @@ Version:                1.0<
 </script> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
     </head>
     <body>
+        <div class="loader"></div>
         <a id="about"><div id="aboutView"></div>
         <div class="desc">
             about me
         </div>
         <div class="aboutBoth">
             <div class="aboutLeft">
-                <div class="pic"><div class="opaque"></div></div>
+                <div class="picC">
+                    <div class="pic">
+                        <div class="code"></div>
+                        <div class="opaque"></div>
+                    </div>
+                </div>
                 <div class="content">
                     <p>
                         I'm a 24 year-old front-end web developer.
@@ -72,7 +78,7 @@ Version:                1.0<
                                 Justice
                             </p>
                         </div>
-                        <div class="art">
+                        <div class="art" id="artThree">
                             <p>
                                 William Fitzsimmons
                             </p>
@@ -113,10 +119,22 @@ Version:                1.0<
         <div class="workView">
             <a href="#home" id="homeTwo" class="homeTwo">home</a>
             <div class="buttons">
-                <div class="button"><i class="fa fa-desktop fa-4x" aria-hidden="true"></i></div>
-                <div class="button"><i class="fa fa-code fa-4x" aria-hidden="true"></i></div>
-                <div class="button"><i class="fa fa-hand-spock-o fa-4x" aria-hidden="true"></i></div>
-                <div class="button"><i class="fa fa-coffee fa-4x" aria-hidden="true"></i></div>
+                <div class="button">
+                    <div class="icon" id="iconOne"></div>
+                    <div class="overlay" id="overlayOne"></div>
+                </div>
+                <div class="button">
+                    <div class="icon" id="iconTwo"></div>
+                    <div class="overlay" id="overlayTwo"></div>
+                </div>
+                <div class="button">
+                    <div class="icon" id="iconThree"></div>
+                    <div class="overlay" id="overlayThree"></div>
+                </div>
+                <div class="button">
+                    <div class="icon" id="iconFour"></div>
+                    <div class="overlay" id="overlayFour"></div>
+                </div>
             </div>
             <div class="slideHold">
                 <div class="slide">
@@ -139,8 +157,14 @@ Version:                1.0<
                 <div class="slide"></div>
                 <div class="slide">
                     <div class="quads">
-                        <div class="quad"></div>
-                        <div class="quad"></div>
+                        <div class="quad">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p></div>
+                        <div class="quad">
+                            <div class="hub"></div>
+                        </div>
                     </div>
                     <div class="quads">
                         <div class="quad"></div>
@@ -148,7 +172,10 @@ Version:                1.0<
                     </div>
                     <div class="border"></div>
                     <div class="border"></div>
-                    <div class="prac"></div>
+                    <div class="prac">
+                        <h1>Best Practices</h1>
+
+                    </div>
                 </div>
                 <div class="slide"></div>
             </div>
@@ -157,8 +184,7 @@ Version:                1.0<
                 work
             </div>
         </div>
-        <div class="modal"></div><script type="text/javascript" src="js/scripts.js">
-</script> <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js">
-</script></a>
+    </a>
+    <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>

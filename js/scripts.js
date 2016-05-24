@@ -4,15 +4,8 @@ Written by:		Derek Guzman
 Version:		1.0
 */
 
-$body = $("body");
-
-$(document).on({
-    ajaxStart: function() {
-        $body.addClass("loading");
-    },
-    ajaxStop: function() {
-        $body.removeClass("loading");
-    }
+$(window).load(function() {
+	$(".loader").fadeOut(0.5+"s");
 });
 $("html, body").animate({
     scrollTop: $("#home").offset().top

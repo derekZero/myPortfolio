@@ -517,7 +517,15 @@ a {
 	right: 28vw;
 }
 
-.work {
+.nav {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 300vh;
+	width: 15vw;
+}
+
+/*.work {
 	border: none;
 	box-sizing: border-box;
 	color: white;
@@ -530,7 +538,7 @@ a {
 	text-align: center;
 	top: 215;
 	width: 15vw;
-}
+}*/
 
 .work:hover {
 	box-shadow: 0 0 0 0.1em;
@@ -826,17 +834,25 @@ a {
 }
 
 .slide:nth-child(3) {
-	align-items: center;
-	background-image: url("../assets/code.gif");
-/*	background-color: rgba(132, 132, 132, 0.8);*/
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	background: url("../assets/code.gif")
+				50% 50%/200% 200%
+				no-repeat;
+	font-family: 'Montserrat', sans-serif;
 	height: inherit;
 	position: absolute;
 	right: 90vw;
 	width: inherit;
 	z-index: -3;
+}
+
+.slideOverlay {
+	align-items: center;
+	background-color: rgba(0, 255, 252, 0.5);
+	display: flex;
+	flex-direction: row;
+	height: inherit;
+	justify-content: center;
+	width: inherit;
 }
 
 .quads {
@@ -848,30 +864,85 @@ a {
 }
 
 .quads:nth-child(1) {
-	border-right: 1vw solid rgba(255, 255, 255, 0.7);
+	margin-right: 1vw;
 }
 
 .quads:nth-child(2) {
 	margin-right: 5vw;
 }
 
+.quads:nth-child(1) .quad:nth-child(1) {
+	background: rgba(0, 0, 0, 0.8)
+				url("../assets/animatedicons/lightbulb/color.gif")
+				120% -20%/55% 60%
+				no-repeat;
+}
+
+.quads:nth-child(1) .quad:nth-child(1) h1 {
+	margin-top: 1vh;
+	padding: 0.5em;
+}
+
+.quads:nth-child(1) .quad:nth-child(1) p {
+	padding: 1em;
+}
+
+.quads:nth-child(1) .quad:nth-child(2) {
+	background: rgba(0, 0, 0, 0.8)
+				url("../assets/animatedicons/pie-chart/color.gif")
+				120% -20%/55% 60%
+				no-repeat;
+}
+
+.quads:nth-child(1) .quad:nth-child(2) h1 {
+	margin-top: 1vh;
+	padding: 0.5em;
+}
+
+.quads:nth-child(1) .quad:nth-child(2) p {
+	padding: 1em;
+}
+
+.quads:nth-child(2) .quad:nth-child(1) {
+	background: rgba(0, 0, 0, 0.8)
+				url("../assets/animatedicons/responsive/color.gif")
+				120% -20%/55% 60%
+				no-repeat;
+}
+
+.quads:nth-child(2) .quad:nth-child(1) h1 {
+	margin-top: 1vh;
+	padding: 0.5em;
+}
+
+.quads:nth-child(2) .quad:nth-child(1) p {
+	padding: 1em;
+}
+
+.quads:nth-child(2) .quad:nth-child(2) {
+	background: rgba(0, 0, 0, 0.8)
+				url("../assets/animatedicons/diamond/color.gif")
+				120% -20%/55% 60%
+				no-repeat;
+}
+
+.quads:nth-child(2) .quad:nth-child(2) h1 {
+	margin-top: 1vh;
+	padding: 0.5em;
+}
+
+.quads:nth-child(2) .quad:nth-child(2) p {
+	padding: 1em;
+}
+
 .quad {
-	background-color: rgba(0, 0, 0, 0.7);
-	height: 31.5vh;
+	color: white;
+	height: 31.5vh;	
 	width: 25vw;
 }
 
 .quad:nth-child(1) {
-	border-bottom: 1vh solid rgba(255, 255, 255, 0.7);
-}
-
-.quad:nth-child(1) p {
-	color: white;
-	padding: 0.8em;
-}
-
-.quad:nth-child(2) {	
-	height: 31.5vh;
+	margin-bottom: 2vh;
 }
 
 .prac {
@@ -889,7 +960,6 @@ a {
 	margin-bottom: 1em;
 	padding: 0.1em;
 	text-align: center;
-	text-decoration: underline;
 	text-wrap: none;
 }
 
@@ -900,16 +970,19 @@ ul {
 }
 
 li {
-	padding: 0.5em;
+	padding: 1em;
 }
 
 .slide:nth-child(4) {
-	background-color: blue;
-	height: inherit;
+	background: url("../assets/wood.png")
+				50% 50%
+				fixed
+				no-repeat;
+	height: 70vh;
 	overflow: hidden;
 	position: absolute;
 	right: 90vw;
-	width: inherit;
+	width: 90vw;
 	z-index: -4;
 }
 

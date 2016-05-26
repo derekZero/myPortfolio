@@ -7,7 +7,7 @@ Version:		1.0
 .loader {
 	background: rgba(255, 255, 255, 1)
 				url('../assets/pac.gif')
-				50% 50%
+				50% 50%/10% 15%
 				no-repeat;
 	height: 100vh;
 	left: 0;
@@ -275,7 +275,7 @@ a {
 
 .art p {
 	bottom: 0;
-	color: lightblue;
+	color: red;
 	font-size: 15pt;
 	padding: 1em;
 	position: absolute;
@@ -299,24 +299,25 @@ a {
 				50% 50%
 				no-repeat;
 	opacity: 0;
+	overflow: hidden;
 	z-index: 10;
 }
 
 .artRowTwo .art:nth-child(1):hover .artHover {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.5s;
 }
 
 .artRow .art:nth-child(2) {
 	background: url("../assets/justice.jpg")
-				50% 50%
+				50% 50%/103% 103%
 				no-repeat;
-	transform: scale(1.15, 1);
+	overflow: hidden;
 }
 
 .artRow .art:nth-child(2) .artHover {
 	background: url("../assets/justiceColor.png")
-				50% 50%
+				50% 50%/103% 103%
 				no-repeat;
 	opacity: 0;
 	z-index: 10;
@@ -324,19 +325,18 @@ a {
 
 .artRow .art:nth-child(2):hover .artHover {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 .artRow .art:nth-child(3) {
 	background: url("../assets/fitz.jpg")
-				50% 50%
+				50% 50%/101% 130%
 				no-repeat;
-	transform: scale(1.15, 1);
 }
 
 .artRow .art:nth-child(3) .artHover {
 	background: url("../assets/fitzColor.png")
-				50% 50%
+				50% 50%/101% 130%
 				no-repeat;
 	opacity: 0;
 	z-index: 10;
@@ -344,7 +344,7 @@ a {
 
 .artRow .art:nth-child(3):hover .artHover {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 .artRowTwo .art:nth-child(1) {
@@ -366,19 +366,19 @@ a {
 
 .artRowTwo .art:nth-child(1):hover .artHover:nth-child(1) {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 .artRowTwo .art:nth-child(2) {
 	background: url("../assets/stirling.jpg")
-				50% 50%
+				50% 50%/100% 120%
 				no-repeat;
 	transform: scale(1.12, 1);
 }
 
 .artRowTwo .art:nth-child(2) .artHover {
 	background: url("../assets/stirlingColor.png")
-				50% 50%
+				50% 50%/100% 120%
 				no-repeat;
 	opacity: 0;
 	z-index: 10;
@@ -386,7 +386,7 @@ a {
 
 .artRowTwo .art:nth-child(2):hover .artHover {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 .artRowTwo .art:nth-child(3) {
@@ -405,7 +405,7 @@ a {
 
 .artRowTwo .art:nth-child(3):hover .artHover {
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 #listen {
@@ -424,15 +424,16 @@ a {
 }
 
 .homeOne {
+	align-items: center;
 	border: none;
 	color: #19E0FF;
+	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16pt;
-	margin: 0;
-	padding: 1em;
+	height: 10vh;
+	justify-content: center;
 	position: absolute;
-	right: 40vw;
-	text-align: center;
+	right: 42.5vw;
 	top: 85vh;
 	width: 15vw;
 }
@@ -448,36 +449,23 @@ a {
 	flex-direction: column;
 	height: 100vh;
 	justify-content: center;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 100vh;
-	width: 100vw;
-}
-
-.home {
-	background-color: #19E0FF;
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
 	position: absolute;
 	top: 100vh;
 	width: 100vw;
 }
 
 .about {
+	align-items: center;
 	border: none;
 	color: white;
+	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16pt;
-	margin: 0;
-	padding: 1em;
+	height: 10vh;
+	justify-content: center;
 	position: absolute;
-	right: 40vw;
 	text-align: center;
+	right: 42.5vw;
 	top: 80vh;
 	width: 15vw;
 }
@@ -517,28 +505,19 @@ a {
 	right: 28vw;
 }
 
-.nav {
+.work {
 	align-items: center;
-	display: flex;
-	flex-direction: column;
-	height: 300vh;
-	width: 15vw;
-}
-
-/*.work {
-	border: none;
-	box-sizing: border-box;
 	color: white;
+	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16pt;
-	margin: 0;
-	padding: 1em;
+	height: 10vh;
+	justify-content: center;
 	position: absolute;
-	right: 40vw;
-	text-align: center;
-	top: 215;
+	right: 42.5vw;
+	top: 215vh;
 	width: 15vw;
-}*/
+}
 
 .work:hover {
 	box-shadow: 0 0 0 0.1em;
@@ -548,22 +527,21 @@ a {
 #work {
 	background-color: white;
 	height: 100vh;
-	margin: 0;
-	padding: 0;
 	position: absolute;
 	top: 200vh;
 	width: 100vw;
 }
 
 .homeTwo {
-	border: none;
+	align-items: center;
 	color: #19E0FF;
+	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16pt;
-	margin: 0;
-	padding: 1em;
+	height: 10vh;
+	justify-content: center;
 	position: absolute;
-	right: 40vw;
+	right: 42.5vw;
 	text-align: center;
 	top: 202vh;
 	width: 15vw;

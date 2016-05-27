@@ -17,6 +17,12 @@ Version:		1.0
 	z-index: 9999;
 }
 
+.contactForm {
+	border: 1em solid black;
+	height: 40vh;
+	width: 50vh;
+}
+
 body.loading .modal {
 	display: block;
 }

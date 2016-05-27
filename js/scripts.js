@@ -172,4 +172,55 @@ $(document).ready(function() {
             top: "15vh"
         });
     });
+    $("#contactForm").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true,
+                maxlength: 1000
+            }
+        },
+        messages: {
+            name: {
+                required: "Don't forget your name"
+            },
+            email: {
+                required: "Don't forget your email"
+            },
+            message: {
+                required: "Actions are not stronger than words on the internet",
+                maxlength: jQuery.format("I can't accept that novel")
+            },
+        },
+        submitHandler: function(form) {
+            $form = $(form);
+            $container = $form.parent();
+            w = $form.outerWidth();
+            h = $form.outerHeight();
+            $form.hide();
+            $('#submitting', $container).width(w).height(h).fadeIn(500);
+            $.ajax({
+                type: "POST",
+                url: $form.attr('action'),
+                data: $form.serialize(),
+                success: function(data) {
+                    $('#submitting', $container).hide();
+                    if(data == 'success'){
+                        $('#submitted', $container).width(w).height(h).fadeIn(500);
+                    }
+                    else{
+                        $('#errors', $container).html(data).show();
+                        $form.show();
+                    }
+                }
+            });
+            return false;
+        }
+    });
 });

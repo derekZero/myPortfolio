@@ -172,6 +172,20 @@ $(document).ready(function() {
             top: "15vh"
         });
     });
+    $(".contact").click(function() {
+        $(".contactForm").css({
+            "z-index": "9999",
+            "opacity": "1",
+            "transition": "all 0.5s"
+        });
+    });
+    $(".contactForm p").click(function(){
+        $(".contactForm").css({
+            "z-index": "-9999",
+            "opacity": "0",
+            "transition": "all 0.5s"
+        });
+    });
     $("#contactForm").validate({
         rules: {
             name: {

@@ -28,33 +28,45 @@ Version:                1.0<
     <body>
         <div class="loader"></div>
         <div class="contactForm">
-            <h1>Drop me a line</h1>
+            <h1>What can I build for you?</h1><p>X</p>
             <form id="contactForm" method="POST" action="form-to-email.php">
                 <div class="formRow">
-                    <label>Name</label>
-                    <input class="name" type="text" name="name" />
+                    <div class="formCo">
+                        <label>Name</label>
+                        <input class="name" type="text" name="name" />
+                    </div>
                 </div>
                 <div class="formRow">
-                    <label>Email</label>
-                    <input class="email" type="text" name="email" />
+                    <div class="formCo">
+                        <label>Email</label>
+                        <input class="email" type="text" name="email" />
+                    </div>
                 </div>
                 <div class="formRow">
-                    <label>Phone</label>
-                    <input class="phone" type="text" name="phone" />
-                    <label>Skype</label>
-                    <input class="skype" type="text" name="skype" />
+                    <div class="formCo">
+                        <label>Phone</label>
+                        <input class="phone" type="text" name="phone" />
+                    </div>
+                    <div class="formCo">
+                        <label>Skype</label>
+                        <input class="skype" type="text" name="skype" />
+                    </div>
                 </div>
                 <div class="formRow">
-                    <label>Message</label>
-                    <textarea class="message" name="message"></textarea>
+                    <div class="formCo">
+                        <label>Message</label>
+                        <textarea class="message" name="message"></textarea>
+                    </div>
                 </div>
                 <div id="errors"></div>
                 <div class="formRow no-margin">
-                    <input type="submmit" name="submit" value="Submit" id="submit" />
+                    <input type="submit" name="submit" value="Send" id="submit" />
+                </div>
             </form>
-            <div id="submitting"><h2>Submitting...</h2></div>
+            <div id="submitting"><h2><i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>Sending...</h2></div>
             <div id="submitted"><h2>Thanks!<br>
-                I'll be in touch with you shortly.</h2></div>
+                I'll be in touch soon.</h2></div>
+        </div>
         <a id="about"><div id="aboutView"></div>
         <div class="desc">
             about me

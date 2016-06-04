@@ -26,10 +26,10 @@ Version:                1.0<
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="loader"></div>
+        <div class="loader"><span>{</span>LOADING<span>}</span></div>
         <div class="contactForm">
             <h1>What can I build for you?</h1><p>X</p>
-            <form id="contactForm" method="POST" action="form-to-email.php">
+            <form id="contactForm" method="POST" action="php/form-to-email.php">
                 <div class="formRow">
                     <div class="formCo">
                         <label>Name</label>
@@ -67,95 +67,103 @@ Version:                1.0<
             <div id="submitted"><h2>Thanks!<br>
                 I'll be in touch soon.</h2></div>
         </div>
-        <a id="about"><div id="aboutView"></div>
-        <div class="desc">
-            about me
-        </div>
-        <div class="aboutBoth">
-            <div class="aboutLeft">
-                <div class="picC">
-                    <div class="pic">
-                        <div class="code"></div>
-                        <div class="opaque"></div>
+
+        <a id="about" name="about"><div id="aboutView">
+            <div class="desc">
+                about me
+            </div>
+            <div class="aboutBoth">
+                <div class="aboutLeft">
+                    <div class="picC">
+                        <div class="pic">
+                            <div class="code"></div>
+                            <div class="opaque"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            I'm a 24 year-old front-end web developer.
+                        </p>
+                        <p>
+                            I focus on mobile responsivity and UX engagement.
+                        </p>
+                        <p>
+                            I can solve a Rubix Cube in less than two minutes.
+                        </p>
+                        <p>
+                            I read every day to expand what I can do.
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <div class="contactC"></div>
+                        <i class="fa fa-optin-monster fa-3x" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="content">
-                    <p>
-                        I'm a 24 year-old front-end web developer.
-                    </p>
-                    <p>
-                        I focus on mobile responsivity and UX engagement.
-                    </p>
-                    <p>
-                        I can solve a Rubix Cube in less than two minutes.
-                    </p>
-                    <p>
-                        I read every day to expand what I can do.
-                    </p>
-                </div>
-                <div class="contact">
-                    <div class="contactC"></div>
-                    <i class="fa fa-optin-monster fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="aboutRight">
-                <div class="icons">
-                    <i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
-                </div>
-                <div class="artists">
-                    <p id="listen">
-                        WHAT I'M LISTENING TO
-                    </p>
-                    <div class="artRow">
-                        <div class="art"><div class="artHover">
-                            <p>
-                                The WEEKND
-                            </p>
-                        </div></div>
-                        <div class="art"><div class="artHover">
-                            <p>
-                                Justice
-                            </p>
-                        </div></div>
-                        <div class="art"><div class="artHover">
-                            <p>
-                                William Fitzsimmons
-                            </p>
-                        </div></div>
+                <div class="aboutRight">
+                    <div class="icons">
+                        <i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
                     </div>
-                    <div class="artRowTwo">
-                        <div class="art"><div class="artHover">
-                            <p>
-                                Daft Punk
-                            </p>
-                        </div></div>
-                        <div class="art"><div class="artHover">
-                            <p>
-                                Lindsey Stirling
-                            </p>
-                        </div></div>
-                        <div class="art"><div class="artHover">
-                            <p>
-                                Digitalism
-                            </p>
-                        </div></div>
+                    <div class="artists">
+                        <p id="listen">
+                            WHAT I'M LISTENING TO
+                        </p>
+                        <div class="artRow">
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    The WEEKND
+                                </p>
+                            </div></div>
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    Justice
+                                </p>
+                            </div></div>
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    William Fitzsimmons
+                                </p>
+                            </div></div>
+                        </div>
+                        <div class="artRowTwo">
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    Daft Punk
+                                </p>
+                            </div></div>
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    Lindsey Stirling
+                                </p>
+                            </div></div>
+                            <div class="art"><div class="artHover">
+                                <p>
+                                    Digitalism
+                                </p>
+                            </div></div>
+                        </div>
                     </div>
                 </div>
+            </div><a href="#home" id="homeOne" name="home" class="homeOne">home</a>
+        </div></a>
+
+        <a id="home"><div class="homeView">
+            <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+            <a href="#about" class="about">about</a>
+            <div class="title">
+                <div class="titleOne">
+                    Derek Guzman
+                </div><br>
+                <div class="slash">
+                    /
+                </div><br>
+                <div class="titleTwo">
+                    Web Developer
+                </div>
             </div>
-        </div></a><a href="#home" id="homeOne" class="homeOne">home</a> <a id="home">
-        <div class="homeView"></div></a> <a href="#about" class="about">about</a>
-        <div class="title">
-            <div class="titleOne">
-                Derek Guzman
-            </div><br>
-            <div class="slash">
-                /
-            </div><br>
-            <div class="titleTwo">
-                Web Developer
-            </div>
-        </div><a href="#work" class="work">work</a> <a id="work">
-        <div class="workView">
+            <a href="#work" name="work" class="work">work</a>
+        </div></a>
+
+        <a id="work"><div class="workView">
             <a href="#home" id="homeTwo" class="homeTwo">home</a>
             <div class="buttons">
                 <div class="button">
@@ -260,7 +268,9 @@ Version:                1.0<
                 work
             </div>
         </div>
-    </a>
+    </div></a>
+
+    <script src="js/particles.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     </body>

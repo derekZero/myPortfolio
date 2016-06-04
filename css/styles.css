@@ -5,17 +5,46 @@ Version:		1.0
 */
 
 .loader {
-	background: rgba(255, 255, 255, 1)
-				url('../assets/pac.gif')
-				50% 50%/10% 15%
-				no-repeat;
+	align-items: center;
+	background-color: #19E0FF;
+	color: #fff;
+	display: flex;
+	font-family: Consolas, Menlo, Monaco, monospace;
+	font-weight: bold;
+	font-size: 30vh;
 	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
+	justify-content: center;
 	width: 100vw;
 	z-index: 9999;
 }
+
+.loader span {
+  display: inline-block;
+  -webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+          animation: pulse 0.4s alternate infinite ease-in-out;
+}
+
+.loader span:nth-child(odd) {
+	-webkit-animation-delay: 0.4s;
+	      animation-delay: 0.4s;
+}
+
+@-webkit-keyframes pulse {
+  to {
+	    -webkit-transform: scale(0.8);
+	            transform: scale(0.8);
+	    opacity: 0.5;
+	  }
+	}
+
+@keyframes pulse {
+	to {
+		-webkit-transform: scale(0.8);
+		        transform: scale(0.8);
+		opacity: 0.5;
+	}
+}
+
 
 .contactForm {
 	background-color: white;
@@ -26,6 +55,7 @@ Version:		1.0
 	opacity: 0;
 	position: fixed;
 	top: 8vh;
+	transition: all 0.5s;
 	width: 50vw;
 	z-index: -9999;
 }
@@ -287,6 +317,12 @@ a {
 	height: 15vh;
 	transition: all 0.5s;
 	top: 55vh;
+}
+
+.contactPop {
+	opacity: 1;
+	transition: all 0.5s;
+	z-index: 9999;
 }
 
 .aboutRight {
@@ -567,6 +603,7 @@ a {
 }
 
 #home {
+	align-items: center;
 	background-color: #19E0FF;
 	display: flex;
 	flex-direction: column;
@@ -586,6 +623,7 @@ a {
 	font-size: 16pt;
 	height: 10vh;
 	justify-content: center;
+	opacity: 0;
 	position: absolute;
 	text-align: center;
 	right: 42.5vw;
@@ -596,6 +634,12 @@ a {
 .about:hover {
 	box-shadow: 0 0 0 0.1em;
 	transition: all 0.5s;
+}
+
+.aboutDone {
+	opacity: 1;
+	top: 105vh;
+	transition: all 1s;
 }
 
 .title {
@@ -616,16 +660,33 @@ a {
 	right: 48vw;
 }
 
+.titleOneIntro {
+	opacity: 1;
+	right: 40vw;
+	transition: all 1s;
+}
+
 .slash {
 	opacity: 0;
 	position: absolute;
 	right: 49%;
 }
 
+.slashIntro {
+	opacity: 1;
+	transition: all 1s;
+}
+
 .titleTwo {
 	opacity: 0;
 	position: absolute;
 	right: 28vw;
+}
+
+.titleTwoIntro {
+	opacity: 1;
+	right: 40vw;
+	transition: all 1s;
 }
 
 .work {
@@ -636,6 +697,7 @@ a {
 	font-size: 16pt;
 	height: 10vh;
 	justify-content: center;
+	opacity: 0;
 	position: absolute;
 	right: 42.5vw;
 	top: 215vh;
@@ -645,6 +707,12 @@ a {
 .work:hover {
 	box-shadow: 0 0 0 0.1em;
 	transition: all 0.5s;
+}
+
+.workDone {
+	opacity: 1;
+	top: 185vh;
+	transition: all 1s;
 }
 
 #work {
@@ -837,13 +905,64 @@ a {
 	right: 90vw;
 	width: inherit;
 	z-index: -1;
+
+	height: 100%;
+	font-size: 1em;
+	background-color: hsl(60, 0%, 20%);
+	background-image: /* 1 */
+	radial-gradient( white 10%, hsla(0, 0%, 100%, 0) 11%), /* 2 */
+	radial-gradient( white 10%, hsla(0, 0%, 100%, 0) 11%), /* 3 */
+	radial-gradient( white 8%, hsla(0, 0%, 100%, 0) 9%), /* 4 */
+	radial-gradient( white 6%, hsla(0, 0%, 100%, 0) 7%), /* 5 */
+	radial-gradient( white 6%, hsla(0, 0%, 100%, 0) 7%), /* 6 */
+	radial-gradient( white 8%, hsla(0, 0%, 100%, 0) 9%), /* 7 */
+	radial-gradient( white 10%, hsla(0, 0%, 100%, 0) 11%), /* 8 */
+	radial-gradient( white 10%, hsla(0, 0%, 100%, 0) 11%), radial-gradient( hsla(124, 40%, 90%, .7), hsla(0, 0%, 100%, 0)), linear-gradient( 60deg, hsl(124, 80%, 50%), hsl(225, 80%, 50%), hsl(10, 80%, 50%));
+	background-position: calc(50% - 5em) 50%, /* 1 */
+	calc(50% - 2.5em) calc(50% - 1.5em), /* 2 */
+	50% calc(50% - 2em), /* 3 */
+	calc(50% + 2.5em) calc(50% - 1.5em), /* 4 */
+	calc(50% - 5em) 50%, /* 5 */
+	calc(50% - 2.5em) calc(50% + 1.5em), /* 6 */
+	50% calc(50% + 2em), /* 7 */
+	calc(50% + 2.5em) calc(50% + 1.5em), /* 8 */
+	0 50%, 0 50%;
+	background-size: 10em 10em, 10em 10em, 10em 10em, 10em 10em, 10em 10em, 10em 10em, 10em 10em, 10em 10em, 100% 100%, 100% 100%;
+	background-repeat: repeat-x;
+	animation: .25s ring linear infinite;
+}
+
+@keyframes ring {
+	0% {
+		background-position: calc(50% - 5em) 50%, /* 1 */
+		calc(50% - 2.5em) calc(50% - 1.5em), /* 2 */
+		50% calc(50% - 2em), /* 3 */
+		calc(50% + 2.5em) calc(50% - 1.5em), /* 4 */
+		calc(50% - 5em) 50%, /* 5 */
+		calc(50% - 2.5em) calc(50% + 1.5em), /* 6 */
+		50% calc(50% + 2em), /* 7 */
+		calc(50% + 2.5em) calc(50% + 1.5em), /* 8 */
+		0 50%, 0 50%;
+	}
+	100% {
+		background-position: calc(50% - 2.5em) calc(50% - 1.5em), /* 1 */
+		50% calc(50% - 2em), /* 2 */
+		calc(50% + 2.5em) calc(50% - 1.5em), /* 3 */
+		calc(50% + 5em) 50%, /* 4 */
+		calc(50% - 2.5em) calc(50% + 1.5em), /* 5 */
+		50% calc(50% + 2em), /* 6 */
+		calc(50% + 2.5em) calc(50% + 1.5em), /* 7 */
+		calc(50% + 5em) 50%, /* 8 */
+		0 50%, 0 50%;
+	}
 }
 
 .webPic {
-	background-color: blue;
+	background: url("../assets/template/index.html")
+				50% 50%
+				no-repeat;
 	height: 70vh;
 	margin-left: 10vw;
-	position: relative;
 	width: 30vw;
 }
 
@@ -867,7 +986,6 @@ a {
 }
 
 .slide:nth-child(2) {
-	background-color: rgba(164, 165, 165, 0.8);
 	height: 70vh;
 	overflow: hidden;
 	position: absolute;

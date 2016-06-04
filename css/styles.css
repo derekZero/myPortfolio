@@ -612,6 +612,19 @@ a {
 	position: absolute;
 	top: 100vh;
 	width: 100vw;
+	z-index: 1;
+}
+
+#particles-js {
+  background:   #19e0ff
+  				50% 50%
+  				contain
+  				no-repeat;
+  	height: 100vh;
+  	position: absolute;
+  	top: 0;
+  	width: 100vw;
+  	z-index: 2;
 }
 
 .about {
@@ -620,7 +633,7 @@ a {
 	color: white;
 	display: flex;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16pt;
+	font-size: 20pt;
 	height: 10vh;
 	justify-content: center;
 	opacity: 0;
@@ -629,6 +642,7 @@ a {
 	right: 42.5vw;
 	top: 80vh;
 	width: 15vw;
+	z-index: 3;
 }
 
 .about:hover {
@@ -645,13 +659,14 @@ a {
 .title {
 	color: white;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 25pt;
+	font-size: 40pt;
 	font-weight: 200;
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 135vh;
 	width: 100vw;
+	z-index: 3;
 }
 
 .titleOne {
@@ -694,7 +709,7 @@ a {
 	color: white;
 	display: flex;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16pt;
+	font-size: 20pt;
 	height: 10vh;
 	justify-content: center;
 	opacity: 0;
@@ -702,6 +717,7 @@ a {
 	right: 42.5vw;
 	top: 215vh;
 	width: 15vw;
+	z-index: 3;
 }
 
 .work:hover {

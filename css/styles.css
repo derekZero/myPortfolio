@@ -152,7 +152,7 @@ input {
 	background-color: lightgreen;
 }
 
-input[type="submit"] {
+button {
 	cursor: pointer;
 	width: 40vw;
 	padding: 10px 0px 10px 0px;
@@ -160,6 +160,7 @@ input[type="submit"] {
 	text-align: center;
 	font-size: 20pt;
 	color: #ffffff;
+	display: block;
 	border: none;
 	background: #b8d837;
 	background: -moz-linear-gradient(top, #b8d837 0%, #99bd0d 100%);
@@ -172,19 +173,28 @@ input[type="submit"] {
 	z-index: 1;
 }
 
-#contactForm label.error {
+.error {
 	color: red;
-	font-size: 16pt;
-}
-
-#contactForm input.error {
-	color: red;
-	font-size: 16pt;
-}
-
-.submitting {
-	color: white;
+	font-size: 20pt;
 	left: 0;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 72vh;
+	width: 100%;
+	z-index: 4;
+}
+
+.errorShow {
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+.sending {
+	color: white;
+	font-size: 20pt;
+	left: 0;
+	opacity: 0;
 	position: absolute;
 	text-align: center;
 	top: 72vh;
@@ -193,14 +203,26 @@ input[type="submit"] {
 
 }
 
-.submitted {
+.sendingShow {
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+.sent {
 	color: white;
+	font-size: 20pt;
 	left: 0;
+	opacity: 0;
 	position: absolute;
 	text-align: center;
 	top: 72vh;
-	margin-width: 100%;
+	width: 100%;
 	z-index: 3;
+}
+
+.sentShow {
+	opacity: 1;
+	transition: all 0.3s;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);

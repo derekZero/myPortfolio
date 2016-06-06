@@ -1,49 +1,37 @@
 <?php
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$phone = $_POST['phone'];
-	$skype = $_POST['skype'];
-	$message = $_POST['message'];
-	$to = "derek.guzman777@gmail.com";
-	$subject = "Reply from Portfolio";
-	mail($to, $subject, $message, "From: $name, $email, $phone, $skype");
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$name = strip_tags(trim($_POST["name"]));
+				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+		$email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+		$phone = strip_tags(trim($_POST["phone"]));
+				$phone = str_replace(array("\r","\n"),array(" "," "),$phone);
+		$skype = strip_tags(trim($_POST["skype"]));
+				$skype = str_replace(array("\r","\n"),array(" "," "),$skype);
+		$message = trim($_POST["message"]);
+		if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			http_response_code(400);
+			echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+			exit;
+		}
+		$recipient = "derek.guzman777@gmail.com";
+		$subject = "Portfolio reply from $name";
+		$email_content = "Name: $name\n";
+		$email_content .= "Email: $email\n\n";
+		$email_content .= "Phone: $phone\n\n";
+		$email_content .= "Skype: $skype\n\n";
+		$email_content .= "Message:\n$message\n";
+		$email_headers = "From: $name <$email>";
+		if (mail($recipient, $subject, $email_content, $email_headers)) {
+			http_response_code(200);
+			echo "Thank You! Your message has been sent.";
+		} else {
+			http_response_code(500);
+			echo "Oops! Something went wrong and we couldn't send your message.";
+		}
+
+	} else {
+		http_response_code(403);
+		echo "There was a problem with your submission, please try again.";
+	}
+
 ?>
-
-<?php
-$email_recipients = "derek.guzman777@gmail.com";
-$visitors_email_field = 'email';
-$email_subject = "Reply from Portfolio";
-$enable_auto_response = true;
-$auto_response_subj = "Thanks! I'll be in touch.";
-$auto_response ="
-Hi,
-
-Thanks for emailing me from my portfolio.
-
-I wanted to let you know I successfully received your email.
-
-You'll have a reply from me shortly.
-
-Regards,
-Derek
-
-";
-$email_from = '';
-if(!isset($_POST['submit']))
-{
-	echo "error; you need to submit the form!".print_r($_POST,true);
-	exit;
-}
-@mail($email_recipients, $email_subject, $email_body, $headers);
-if($enable_autao_response == true && !empty($visitor_email))
-{
-	$headers = "From: $email_from \r\n";
-	@mail($visitor_email, $auto_response_subj, $auto_response, $headers);
-}
-if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])
-	AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
-{
-	echo "success";
-} else {
-	header('Location: '.)
-}

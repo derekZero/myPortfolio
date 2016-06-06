@@ -319,21 +319,14 @@ $(document).ready(function() {
 			}
 		}
 	});
-	$("#contactForm").validate({
-			rules:{
-				name:"required",
-				email:{
-					required: true,
-					email: true
-				}
-			} ,
-			messages:{
-				name:"Don't forget your name.",
-				email:"Don't forget your email."
-			}
-		});
-	$("form").submit(function() {
-		this.validate({
+	$(form).submit(function(event) {
+		event.preventDefault();
+		var formData = $(form).serialize();
+		var form = $("#contactForm");
+		var sending = $(".sending");
+		var sent = $(".sent");
+		var error = $(".error");
+		$(this).validate({
 			rules:{
 				name:"required",
 				email:{
@@ -346,197 +339,36 @@ $(document).ready(function() {
 				email:"Don't forget your email."
 			}
 		}).ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		}).done(function(response) {
+			$(".submit").removeClass('send');
+			$(".submit").addClass('sent');
+			// Set the message text.
+			$(formMessages).text(response);
+			$('#name').val('');
+			$('#email').val('');
+			$('#message').val('');
+		}).fail(function(data) {
+			$(".submit").removeClass('sent');
+			$(".submit").addClass('error');
+		});
+	});
+		/*}).ajax({
 			method: "POST",
 			url: "../php/sendEmail.php",
 			dataType: "php",
 			data: {name:"", email:"",phone:"",skype:"",message:""}
 		}).ajaxStart(function() {
-			$('#submitting').css('opacity', '1');
-		}).done(function() {
 			$(".submit").css({"color":"rgba(255, 255, 255, 0"}, 300);
-			$('#submitted').css('opacity', '1');
+			$('#submitting').css({"opacity":"1"}, 300);
+		}).done(function() {
+			$('#submitting').css({"opacity":"0"}, 300);
+			$('#submitted').css({"opacity":"1"}, 300);
 		}).error(function() {
 			$("#submitted").css({"opacity":"0"}, 300);
 			$('#contactForm label.error').css('opacity', '1');
 		}).post($(this).attr("action"), $(this).serialize());
-	});
-	/*function send() {
-		$.ajax({
-			url:'',
-			complete: function (response) {
-				$(".submit").css.queue({"color":"rgba(255, 255, 255, 0"}, 300).dequeue();
-				$('#submitted').css('opacity', '1');
-			},
-			error: function () {
-				$("#submitted").css.queue({"opacity":"0"}, 300).dequeue();
-				$('#contactForm label.error').css('opacity', '1');
-			}
-		});
-		return false;
-	}
-	if ($("#contactForm").validate() === true && $(".submit").click() === true) {
-		send();
-	} else {
-		return false;
-	}*/
-	/*validate: function() {
-		rules:{
-			name:"required",
-			email:{
-				required: true,
-				email: true
-			}
-		} ,
-		messages:{
-			name:"Please enter your first name.",
-			email:"Please enter a valid email address."
-		}
-	}*/
-	/*var send = {
-		submitMethod: function() {
-			form.ajax({
-				validate: function() {
-					rules:{
-						name:"required",
-						email:{
-							required: true,
-							email: true
-						}
-					} ,
-					messages:{
-						name:"Please enter your first name.",
-						email:"Please enter a valid email address."
-					}
-				}
-				type: "POST",
-				url:'emailForm.php',
-				serialize: function () {},
-				start: function () {
-					$('#submitting').css('opacity', '1');
-				},
-				success: function (response) {
-					$('#submitted').css('opacity', '1');
-				},
-				error: function () {
-					$('#errors').html('Woops! Let\'s try that again.' );
-				}
-			});
-		}
-	}
-	$(".submit").click(function() {
-		form.send();
-	});*/
-
-	/*function emailForm(form) {
-		emailForm.prototype.send = function() {
-			form.serialize.queue();
-			form.validate({
-				rules:{
-				firstName:"required",
-				lastName:"required",
-				email:{
-					required: true,
-					email: true
-					}
-				} ,
-				messages:{
-					firstName:"Please enter your first name.",
-					lastName:"Please enter your last name.",
-					email:"Please enter a valid email address."
-				}
-			}).dequeue();
-			form.ajax({
-				type: "POST",
-				url:'emailForm.php',
-				start: function () {
-					$('#submitting').css('opacity', '1');
-				},
-				success: function (response) {
-					$('#submitted').css('opacity', '1');
-				},
-				error: function () {
-					$('#errors').html('Woops! Let\'s try that again.' );
-				}
-			});
-		}
-	}*/
-
-	/*var send = {
-		submitForm: function() {
-			form = function(form) {
-			this.form = form;
-		}
-		form.serialize.queue();
-		form.validate({
-			rules:{
-			firstName:"required",
-			lastName:"required",
-			email:{
-				required: true,
-				email: true
-				}
-			} ,
-			messages:{
-				firstName:"Please enter your first name.",
-				lastName:"Please enter your last name.",
-				email:"Please enter a valid email address."
-			}
-		}).dequeue();
-		form.ajax({
-			type: "POST",
-			url:'emailForm.php',
-			start: function () {
-				$('#submitting').css('opacity', '1');
-			},
-			success: function (response) {
-				$('#submitted').css('opacity', '1');
-			},
-			error: function () {
-				$('#errors').html('Woops! Let\'s try that again.' );
-			}
-		});
-		}
-	}*/
-	/*var form = $("form");
-	var form.submitMethod() {
-		submitMethod: function() {
-			this.validate.queue();
-			this.ajax().dequeue();
-		}
-	}
-	submitMethod: function () {
-		$form.validate({
-			rules:{
-				firstName:"required",
-				lastName:"required",
-				email:{
-					required: true,
-					email: true
-				}
-			} ,
-			messages:{
-				firstName:"Please enter your first name.",
-				lastName:"Please enter your last name.",
-				email:"Please enter a valid email address."
-			}
-		});
-		$form.ajax ({
-			type: "POST",
-			url:'myAjax.php',
-			data: $form.serialize(),
-			start: function () {
-				$('#submitting').css('opacity', '1');
-			},
-			success: function (response) {
-				$('#submitted').css('opacity', '1');
-			},
-			error: function () {
-				$('#errors').html('Woops! Let\'s try that again.' );
-			}
-		});
-		return false;
-	}
-	$(".submit").click(function() {
-		form.submitMethod();
 	});*/
 });

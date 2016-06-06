@@ -5,272 +5,270 @@ Version:                1.0<
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Derek Guzman's Web Developer Portfolio
-        </title>
-        <!-- Meta Data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="keywords" content="professional, web, developer, front-end, css, html, javascript, jquery">
-        <meta name="description" content="Derek Guzman's Official portoflio.">
-        <meta name="author" content="Derek Guzman">
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <!-- External CSS -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <!-- Font Awesome icons -->
-        <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css"
-        ><!-- jQuery -->
-        <script src="js/jquery-1.12.4.min.js"></script>
-    </head>
-    <body>
-        <div class="loader"><span>{</span>LOADING<span>}</span></div>
-        <div class="contactForm">
-            <h1>What can I build for you?</h1><p>X</p>
-            <form id="contactForm" action="php/sendEmail.php" method="post" role="form" target="_blank">
-                <div class="formRow">
-                    <div class="formCo">
-                        <label>Name</label>
-                        <input class="name" type="text" id="name" />
-                    </div>
-                </div>
-                <div class="formRow">
-                    <div class="formCo">
-                        <label>Email</label>
-                        <input class="email" type="text" id="email" />
-                    </div>
-                </div>
-                <div class="formRow">
-                    <div class="formCo">
-                        <label>Phone</label>
-                        <input class="phone" type="text" id="phone" />
-                    </div>
-                    <div class="formCo">
-                        <label>Skype</label>
-                        <input class="skype" type="text" id="skype" />
-                    </div>
-                </div>
-                <div class="formRow">
-                    <div class="formCo">
-                        <label>Message</label>
-                        <textarea class="message" id="message"></textarea>
-                    </div>
-                </div>
-                <div id="errors"></div>
-                <div class="formRow no-margin">
-                    <input type="submit" name="submit" value="Send" class="submit">
-                        <div id="submitting" class="submitting"><h2>
-                        <i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>Sending...</h2></div>
-                        <div id="submitted" class="submitted"><h2>Thanks! I'll be in touch soon.</h2></div>
-                    </input>
-                </div>
-            </form>
-        </div>
+	<head>
+		<title>
+			Derek Guzman's Web Developer Portfolio
+		</title>
+		<!-- Meta Data -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="professional, web, developer, front-end, css, html, javascript, jquery">
+		<meta name="description" content="Derek Guzman's Official portoflio.">
+		<meta name="author" content="Derek Guzman">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- External CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<!-- Font Awesome icons -->
+		<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="loader"><span>{</span>LOADING<span>}</span></div>
+		<div class="contactForm">
+			<h1>What can I build for you?</h1><p>X</p>
+			<form id="contactForm" action="php/sendEmail.php" method="post" role="form" target="_blank">
+				<div class="formRow">
+					<div class="formCo">
+						<label>Name</label>
+						<input class="name" type="text" id="name" />
+					</div>
+				</div>
+				<div class="formRow">
+					<div class="formCo">
+						<label>Email</label>
+						<input class="email" type="text" id="email" />
+					</div>
+				</div>
+				<div class="formRow">
+					<div class="formCo">
+						<label>Phone</label>
+						<input class="phone" type="text" id="phone" />
+					</div>
+					<div class="formCo">
+						<label>Skype</label>
+						<input class="skype" type="text" id="skype" />
+					</div>
+				</div>
+				<div class="formRow">
+					<div class="formCo">
+						<label>Message</label>
+						<textarea class="message" id="message"></textarea>
+					</div>
+				</div>
+				<div class="formRow">
+					<button type="submit" class="submit">
+						<div class="send">Send</div>
+						<div class="sending"><i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>Sending...</div>
+						<div class="sent">Sent√</div>
+						<div class="errors"></div>
+					</button>
+				</div>
+			</form>
+		</div>
 
-        <a id="about" name="about"><div id="aboutView">
-            <div class="desc">
-                about me
-            </div>
-            <div class="aboutBoth">
-                <div class="aboutLeft">
-                    <div class="picC">
-                        <div class="pic">
-                            <div class="code"></div>
-                            <div class="opaque"></div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <p>
-                            I'm a 24 year-old front-end web developer.
-                        </p>
-                        <p>
-                            I focus on mobile responsivity and UX engagement.
-                        </p>
-                        <p>
-                            I can solve a Rubix Cube in less than two minutes.
-                        </p>
-                        <p>
-                            I read every day to expand what I can do.
-                        </p>
-                    </div>
-                    <div class="contact">
-                        <div class="contactC"></div>
-                        <i class="fa fa-optin-monster fa-3x" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="aboutRight">
-                    <div class="icons">
-                        <i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
-                    </div>
-                    <div class="artists">
-                        <p id="listen">
-                            WHAT I'M LISTENING TO
-                        </p>
-                        <div class="artRow">
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    The WEEKND
-                                </p>
-                            </div></div>
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    Justice
-                                </p>
-                            </div></div>
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    William Fitzsimmons
-                                </p>
-                            </div></div>
-                        </div>
-                        <div class="artRowTwo">
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    Daft Punk
-                                </p>
-                            </div></div>
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    Lindsey Stirling
-                                </p>
-                            </div></div>
-                            <div class="art"><div class="artHover">
-                                <p>
-                                    Digitalism
-                                </p>
-                            </div></div>
-                        </div>
-                    </div>
-                </div>
-            </div><a href="#home" id="homeOne" name="home" class="homeOne">home</a>
-        </div></a>
+		<a id="about" name="about"><div id="aboutView">
+			<div class="desc">
+				about me
+			</div>
+			<div class="aboutBoth">
+				<div class="aboutLeft">
+					<div class="picC">
+						<div class="pic">
+							<div class="code"></div>
+							<div class="opaque"></div>
+						</div>
+					</div>
+					<div class="content">
+						<p>
+							I'm a 24 year-old front-end web developer.
+						</p>
+						<p>
+							I focus on mobile responsivity and UX engagement.
+						</p>
+						<p>
+							I can solve a Rubix Cube in less than two minutes.
+						</p>
+						<p>
+							I read every day to expand what I can do.
+						</p>
+					</div>
+					<div class="contact">
+						<div class="contactC"></div>
+						<i class="fa fa-optin-monster fa-3x" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="aboutRight">
+					<div class="icons">
+						<i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
+					</div>
+					<div class="artists">
+						<p id="listen">
+							WHAT I'M LISTENING TO
+						</p>
+						<div class="artRow">
+							<div class="art"><div class="artHover">
+								<p>
+									The WEEKND
+								</p>
+							</div></div>
+							<div class="art"><div class="artHover">
+								<p>
+									Justice
+								</p>
+							</div></div>
+							<div class="art"><div class="artHover">
+								<p>
+									William Fitzsimmons
+								</p>
+							</div></div>
+						</div>
+						<div class="artRowTwo">
+							<div class="art"><div class="artHover">
+								<p>
+									Daft Punk
+								</p>
+							</div></div>
+							<div class="art"><div class="artHover">
+								<p>
+									Lindsey Stirling
+								</p>
+							</div></div>
+							<div class="art"><div class="artHover">
+								<p>
+									Digitalism
+								</p>
+							</div></div>
+						</div>
+					</div>
+				</div>
+			</div><a href="#home" id="homeOne" name="home" class="homeOne">home</a>
+		</div></a>
 
-        <a id="home"><div class="homeView"><div id="particles-js"></div>
-            <a href="#about" class="about">about</a>
-            <div class="title">
-                <div class="titleOne">
-                    Derek Guzman
-                </div><br>
-                <div class="slash">
-                    /
-                </div><br>
-                <div class="titleTwo">
-                    Web Developer
-                </div>
-            </div>
-            <a href="#work" name="work" class="work">work</a>
-        </div></a>
+		<a id="home"><div class="homeView"><div id="particles-js"></div>
+			<a href="#about" class="about">about</a>
+			<div class="title">
+				<div class="titleOne">
+					Derek Guzman
+				</div><br>
+				<div class="slash">
+					/
+				</div><br>
+				<div class="titleTwo">
+					Web Developer
+				</div>
+			</div>
+			<a href="#work" name="work" class="work">work</a>
+		</div></a>
 
-        <a id="work"><div class="workView">
-            <a href="#home" id="homeTwo" class="homeTwo">home</a>
-            <div class="buttons">
-                <div class="button">
-                    <div class="icon" id="iconOne"></div>
-                    <div class="overlay" id="overlayOne"></div>
-                </div>
-                <div class="button">
-                    <div class="icon" id="iconTwo"></div>
-                    <div class="overlay" id="overlayTwo"></div>
-                </div>
-                <div class="button">
-                    <div class="icon" id="iconThree"></div>
-                    <div class="overlay" id="overlayThree"></div>
-                </div>
-                <div class="button">
-                    <div class="icon" id="iconFour"></div>
-                    <div class="overlay" id="overlayFour"></div>
-                </div>
-            </div>
-            <div class="slideHold">
-                <div class="slide">
-                    <div class="webPic"></div>
-                    <div class="webDesc">
-                        <h1>
-                            Hire Me
-                        </h1>
-                        <p>
-                            Hire Me is a portfolio template with photographers in mind.
-                        <p>
-                            It looks great on desktop.
-                        </p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="hubMenu">
-                        <div class="hubClick"><p>HTML</p></div>
-                        <div class="hubClick"><p>CSS</p></div>
-                        <div class="hubClick"><p>Javascript</p></div>
-                    </div>
-                    <div class="hub">
-                        <div class="html" id="html">
-                            <script src="https://gist.github.com/derekZero/22e2f9230363d99b60777e1e2e3da189.js"></script>
-                        </div>
-                        <div class="css" id="css">
-                            <script src="https://gist.github.com/derekZero/8bd4a425f08be971f3c988afed9a05e4.js"></script>
-                        </div>
-                        <div class="js" id="js">
-                            <script src="https://gist.github.com/derekZero/8be78ede2faec74d3384154f79c6ce61.js"></script>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slideOverlay">
-                        <div class="quads">
-                            <div class="quad">
-                                <h1>Professional</h1>
-                                <p>All of my code is written in Sublime Text Editor 3.
-                                    It's plugins provide tools to develop in less time.
-                                    My respositories may be found on Github.</p>
-                            </div>
-                            <div class="quad">
-                                <h1>Reliable</h1>
-                                <p>Being a quick study makes me someone you want on
-                                 your side when unexpected obstacles arise. </p>
-                            </div>
-                        </div>
-                        <div class="quads">
-                            <div class="quad">
-                                <h1>Responsive</h1>
-                                <p>This portfolio website looks great on mobile. Media 
-                                    queries are applied based on all mobile sizes in
-                                    Chrome's Inspect Element tool. Dimensions of DOM
-                                    elements are in vh and vw (view-height and 
-                                    view-width) units respetively.</p>
-                            </div>
-                            <div class="quad">
-                                <h1>Communication</h1>
-                                <p>Detailed documentation comes with every completed 
-                                work. Workflow is made managable with Git 
-                                respositories.</p>
-                            </div>
-                        </div>
-                        <div class="prac">
-                            <h1>Best Practices</h1>
-                            <ul>
-                                <li><i class="fa fa-cog fa-spin" aria-hidden="true">
-                                </i>&nbsp;Sociable team player</li>
-                                <li><i class="fa fa-cog fa-spin" aria-hidden="true">
-                                </i>&nbsp;Clean semantic code</li>
-                                <li><i class="fa fa-cog fa-spin" aria-hidden="true">
-                                </i>&nbsp;Always pursuing continued education</li>
-                                <li><i class="fa fa-cog fa-spin" aria-hidden="true">
-                                </i>&nbsp;Professional tools make collaboration simple</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide"><div class="coffee"><div class="keyboard"></div></div></div>
-            </div>
-            <div class="workIcon"></div>
-            <div class="descTwo">
-                work
-            </div>
-        </div>
-    </div></a>
+		<a id="work"><div class="workView">
+			<a href="#home" id="homeTwo" class="homeTwo">home</a>
+			<div class="buttons">
+				<div class="button">
+					<div class="icon" id="iconOne"></div>
+					<div class="overlay" id="overlayOne"></div>
+				</div>
+				<div class="button">
+					<div class="icon" id="iconTwo"></div>
+					<div class="overlay" id="overlayTwo"></div>
+				</div>
+				<div class="button">
+					<div class="icon" id="iconThree"></div>
+					<div class="overlay" id="overlayThree"></div>
+				</div>
+				<div class="button">
+					<div class="icon" id="iconFour"></div>
+					<div class="overlay" id="overlayFour"></div>
+				</div>
+			</div>
+			<div class="slideHold">
+				<div class="slide">
+					<div class="webPic"></div>
+					<div class="webDesc">
+						<h1>
+							Hire Me
+						</h1>
+						<p>
+							Hire Me is a portfolio template with photographers in mind.
+						<p>
+							It looks great on desktop.
+						</p>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="hubMenu">
+						<div class="hubClick"><p>HTML</p></div>
+						<div class="hubClick"><p>CSS</p></div>
+						<div class="hubClick"><p>Javascript</p></div>
+					</div>
+					<div class="hub">
+						<div class="html" id="html">
+							<script src="https://gist.github.com/derekZero/22e2f9230363d99b60777e1e2e3da189.js"></script>
+						</div>
+						<div class="css" id="css">
+							<script src="https://gist.github.com/derekZero/8bd4a425f08be971f3c988afed9a05e4.js"></script>
+						</div>
+						<div class="js" id="js">
+							<script src="https://gist.github.com/derekZero/8be78ede2faec74d3384154f79c6ce61.js"></script>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slideOverlay">
+						<div class="quads">
+							<div class="quad">
+								<h1>Professional</h1>
+								<p>All of my code is written in Sublime Text Editor 3.
+									It's plugins provide tools to develop in less time.
+									My respositories may be found on Github.</p>
+							</div>
+							<div class="quad">
+								<h1>Reliable</h1>
+								<p>Being a quick study makes me someone you want on
+								 your side when unexpected obstacles arise. </p>
+							</div>
+						</div>
+						<div class="quads">
+							<div class="quad">
+								<h1>Responsive</h1>
+								<p>This portfolio website looks great on mobile. Media 
+									queries are applied based on all mobile sizes in
+									Chrome's Inspect Element tool. Dimensions of DOM
+									elements are in vh and vw (view-height and 
+									view-width) units respetively.</p>
+							</div>
+							<div class="quad">
+								<h1>Communication</h1>
+								<p>Detailed documentation comes with every completed 
+								work. Workflow is made managable with Git 
+								respositories.</p>
+							</div>
+						</div>
+						<div class="prac">
+							<h1>Best Practices</h1>
+							<ul>
+								<li><i class="fa fa-cog fa-spin" aria-hidden="true">
+								</i>&nbsp;Sociable team player</li>
+								<li><i class="fa fa-cog fa-spin" aria-hidden="true">
+								</i>&nbsp;Clean semantic code</li>
+								<li><i class="fa fa-cog fa-spin" aria-hidden="true">
+								</i>&nbsp;Always pursuing continued education</li>
+								<li><i class="fa fa-cog fa-spin" aria-hidden="true">
+								</i>&nbsp;Professional tools make collaboration simple</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="slide"><div class="coffee"><div class="keyboard"></div></div></div>
+			</div>
+			<div class="workIcon"></div>
+			<div class="descTwo">
+				work
+			</div>
+		</div>
+	</div></a>
 
-    <script src="js/particles.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/methods.js"></script>
-    </body>
+	<script src="js/particles.min.js"></script>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	</body>
 </html>

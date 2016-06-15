@@ -51,11 +51,11 @@ Version:		1.0
 	background-color: white;
 	border: 1em solid lightblue;
 	font-family: 'Montserrat', sans-serif;
-	height: 80vh;
+	height: 90vh;
 	left: 25vw;
 	opacity: 0;
 	position: fixed;
-	top: 8vh;
+	top: 4vh;
 	transition: all 0.5s;
 	width: 50vw;
 	z-index: -9999;
@@ -82,7 +82,7 @@ Version:		1.0
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin: 1em;
+	margin: 0.5em;
 }
 
 .formCo {
@@ -99,10 +99,15 @@ label {
 
 input {
 	background-color: lightblue;
-	border: none;
+	border: 0.1em solid lightblue;
+	border-radius: 25vh;
 	color: white;
 	font-size: 20pt;
 	text-align: center;
+}
+
+.bad {
+	border: 0.1em solid red;
 }
 
 .name {
@@ -141,9 +146,12 @@ input {
 .message {
 	background-color: lightblue;
 	border: none;
+	border-radius: 5vh;
 	color: white;
 	font-size: 16pt;
 	height: 20vh;
+	overflowY: scroll;
+	padding: 1em;
 	resize: none;
 	width: 40vw;
 }
@@ -151,8 +159,7 @@ input {
 .message:focus {
 	background-color: lightgreen;
 }
-
-button {
+.submit {
 	cursor: pointer;
 	width: 40vw;
 	padding: 10px 0px 10px 0px;
@@ -170,7 +177,19 @@ button {
 	background: -ms-linear-gradient(top, #b8d837 0%,#99bd0d 100%);
 	background: linear-gradient(to bottom, #b8d837 0%,#99bd0d 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8d837', endColorstr='#99bd0d',GradientType=0 );
+	width: 40vw;
 	z-index: 1;
+}
+
+.send {
+	color: white;
+	font-size: 20pt;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 72vh;
+	width: 100%;
+	z-index: 4;
 }
 
 .error {
@@ -290,17 +309,17 @@ a {
 }
 
 .picC {
-	height: 20vh;
+	height: 30vh;
 	overflow: hidden;
-	width: 45vw;
+	width: inherit;
 }
 
 .pic {
 	background: url('../assets/profile.jpg')
-				50% 30%
+				50% 35%
 				no-repeat;
-	height: 20vh;
-	width: 45vw;
+	height: 30vh;
+	width: inherit;
 }
 
 .pic:hover {
@@ -324,20 +343,23 @@ a {
 }
 
 .content {
-	background-color: #5E5F5F;
+	background-color: #5BB4FF;
 	color: white;
+	display: flex;
+	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 35vh;
-	width: 45vw;
+	height: 25vh;
+	justify-content: center;
+	width: inherit;
 }
 
 .content p {
-	margin: 2em;
+	margin: 1em;
 }
 
 .contact {
 	align-items: center;
-	background-color: red;
+	background-color: #1FD01B;
 	color: white;
 	cursor: pointer;
 	display: flex;
@@ -346,7 +368,7 @@ a {
 	height: 15vh;
 	justify-content: center;
 	overflow: hidden;
-	width: 45vw;
+	width: inherit;
 	z-index: 1;
 }
 
@@ -355,12 +377,12 @@ a {
 }
 
 .contactC {
-	background-color: green;
+	background-color: #35FF4D;
 	height: 0;
 	left: 0;
 	position: absolute;
 	top: 70vh;
-	width: 45vw;
+	width: inherit;
 	z-index: 2;
 }
 
@@ -390,7 +412,7 @@ a {
 	height: 15vh;
 	justify-content: space-around;
 	position: relative;
-	width: 100%;
+	width: 55%;
 }
 
 .icons i {
@@ -712,8 +734,6 @@ a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 40pt;
 	font-weight: 200;
-	margin: 0;
-	padding: 0;
 	position: absolute;
 	top: 135vh;
 	width: 100vw;
@@ -724,12 +744,13 @@ a {
 	opacity: 0;
 	position: absolute;
 	right: 48vw;
+	white-space: nowrap;
 }
 
 .titleOneIntro {
 	opacity: 1;
-	right: 40vw;
 	transition: all 1s;
+	right: 35vw;
 }
 
 .slash {
@@ -747,11 +768,12 @@ a {
 	opacity: 0;
 	position: absolute;
 	right: 28vw;
+	white-space: nowrap;
 }
 
 .titleTwoIntro {
 	opacity: 1;
-	right: 40vw;
+	right: 35vw;
 	transition: all 1s;
 }
 
@@ -829,7 +851,7 @@ a {
 	height: 17.5vh;
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	width: 17.5vh;
 	z-index: 1;
 }
 
@@ -1133,7 +1155,7 @@ a {
 
 .slideOverlay {
 	align-items: center;
-	background-color: rgba(0, 255, 252, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 	display: flex;
 	flex-direction: row;
 	height: inherit;
@@ -1271,37 +1293,104 @@ li {
 	position: absolute;
 	right: 90vw;
 	width: 90vw;
-	z-index: -4;
+	z-index: -1;
 }
 
-.coffee {
-	background: url("../assets/elegantvector/coffee.svg")
-				60% 55%/500% 500%
-				no-repeat;
-	height: inherit;
-	width: inherit;
-	z-index: 5;
-}
-
-.keyboard {
-	background: url("../assets/elegantvector/keyboard.svg")
-				40% 25%/300% 300%
-				no-repeat;
-	height: inherit;
-	width: inherit;
-	z-index: 10;
-}
-
-.workIcon {
-	align-items: center;
-	color: lightblue;
+.slideNav {
+	align-items: flex-end;
 	display: flex;
+	flex-direction: row;
+	height: inherit;
+	justify-content: space-between;
+	width: inherit;
+}
+
+.slideNav span {
+	align-items: center;
+	color: rgba(0, 255, 252, 0.6);
+	cursor: pointer;
+	display: flex;
+	font-size: 70pt;
+	font-weight: 900;
+	height: inherit;
+	justify-content: center;
+	width: 10vw;
+	z-index: 50;
+}
+
+.slideNav span:hover {
+	background-color: rgba(0, 255, 252, 0.3);
+	transition: all 0.5s;
+}
+
+.slideNav span:active {
+	background-color: rgba(0, 255, 252, 0.3);
+	transition: all 0.5s;
+}
+
+.qButton {
+	background-color: rgba(0, 255, 252, 0.6);
+	border-radius: 50vh;
+	cursor: pointer;
+	height: 3vh;
+	margin: 1em;
+	width: 3vh;
+	z-index: 50;
+}
+
+.quotes {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 	height: 70vh;
 	justify-content: center;
 	position: absolute;
-	right: 0;
-	top: 215vh;
+	left: -200vw;
+	text-wrap: wrap;
+	top: 0;
 	width: 90vw;
+	z-index: 1;
+}
+
+.quotes p {
+	align-items: flex-start;
+	color: white;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25pt;
+	font-weight: 900;
+	justify-content: center;
+	margin: 15vw;
+	height: 50vh;
+	width: 70vw;
+	z-index: 2;
+}
+
+.quoted {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	height: 70vh;
+	justify-content: center;
+	position: absolute;
+	left: 200vw;
+	text-wrap: wrap;
+	top: 0;
+	width: 90vw;
+	z-index: ;
+}
+
+.quoted p {
+	align-items: flex-end;
+	color: white;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25pt;
+	font-weight: 900;
+	justify-content: flex-end;
+	margin: 15vw;
+	height: 50vh;
+	width: 60vw;
 }
 
 .descTwo {
@@ -1333,6 +1422,21 @@ li {
 }
 
 @media screen and (max-width: 320px) {
-	.titleOne {right: 38vw;}
-	.titleTwo {right: 18vw;}
+	.aboutLeft {width: 80vw; z-index: 1000;}
+	.aboutRight {height: 70vh; width: 20vw; top: 30vh;}
+	.artists {visibility: hidden;}
+	.icons {
+		align-self: flex-end;
+		flex-direction: column; 
+		height: 25%;
+		width: 20vw;
+		z-index: 1001;
+	}
+	.about {font-size: 16pt; width: 25vw;}
+	.title {font-size: 28pt;}
+	.titleOne {right: 90vw;}
+	.titleOneIntro {right: 10vw;}
+	.titleTwo {right: -150vw;}
+	.titleTwoIntro {right: 9vw;}
+	.work {font-size: 16pt; width: 25vw;}
 }

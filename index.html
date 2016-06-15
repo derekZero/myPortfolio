@@ -25,6 +25,9 @@ Version:                1.0<
 		<div class="loader"><span>{</span>LOADING<span>}</span></div>
 		<div class="contactForm">
 			<h1>What can I build for you?</h1><p>X</p>
+			<div class="sending"><i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>Sending...</div>
+			<div class="sent">Sent√</div>
+			<div class="error"></div>
 			<form id="contactForm" action="php/sendEmail.php" method="post" role="form" target="_blank">
 				<div class="formRow">
 					<div class="formCo">
@@ -55,16 +58,14 @@ Version:                1.0<
 					</div>
 				</div>
 				<div class="formRow">
-					<button type="submit" class="submit">
-						<div class="send">Send</div>
-						<div class="sending"><i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>Sending...</div>
-						<div class="sent">Sent√</div>
-						<div class="errors"></div>
-					</button>
+					<input type="submit" class="submit" value="">
+					</input>
 				</div>
 			</form>
 		</div>
 
+
+	<a href="http://www.freepik.com/free-photos-vectors/background">Background vector designed by Harryarts - Freepik.com</a>
 		<a id="about" name="about"><div id="aboutView">
 			<div class="desc">
 				about me
@@ -98,7 +99,7 @@ Version:                1.0<
 				</div>
 				<div class="aboutRight">
 					<div class="icons">
-						<i class="fa fa-github-alt fa-5x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-5x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-5x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-5x" aria-hidden="true" id="gram"></i>
+						<i class="fa fa-github-alt fa-4x" aria-hidden="true" id="git"></i> <i class="fa fa-linkedin fa-4x" aria-hidden="true" id="in"></i> <i class="fa fa-twitter fa-4x" aria-hidden="true" id="twit"></i> <i class="fa fa-instagram fa-4x" aria-hidden="true" id="gram"></i>
 					</div>
 					<div class="artists">
 						<p id="listen">
@@ -140,7 +141,7 @@ Version:                1.0<
 						</div>
 					</div>
 				</div>
-			</div><a href="#home" id="homeOne" name="home" class="homeOne">home</a>
+			</div><a href="#home" id="homeOne" class="homeOne">home</a>
 		</div></a>
 
 		<a id="home"><div class="homeView"><div id="particles-js"></div>
@@ -257,7 +258,34 @@ Version:                1.0<
 						</div>
 					</div>
 				</div>
-				<div class="slide"><div class="coffee"><div class="keyboard"></div></div></div>
+				<div class="slide">
+					<div class="slideNav">
+						<span id="slideLeft"><</span>
+						<div class="qButton" id="qBOne"></div>
+						<div class="qButton" id="qBTwo"></div>
+						<div class="qButton" id="qBThree"></div>
+						<span id="slideRight">></span>
+					</div>
+					<div class="quotes">
+						<div class="quote"><p>Quote 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p></div>
+						<div class="quote"><p>Quote 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p></div>
+						<div class="quote"><p>Quote 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p></div>
+					</div>
+					<div class="quoted">
+						<div class="person"><p>This Person</p></div>
+						<div class="person"><p>That Person</p></div>
+						<div class="person"><p>Gullable</p></div>
+					</div>
+				</div>
 			</div>
 			<div class="workIcon"></div>
 			<div class="descTwo">
@@ -268,7 +296,9 @@ Version:                1.0<
 
 	<script src="js/particles.min.js"></script>
 	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/velocity.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<scipt src="js/smoothScroll.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	</body>
 </html>

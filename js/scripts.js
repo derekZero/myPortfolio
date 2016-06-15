@@ -10,11 +10,23 @@ $(window).load(function() {
 			scrollTop: $("#home").offset().top
 		}, 1).dequeue();
 	});
-	$("#submitting").hide();
-	$("#submitted").hide();
 	$(".loader").fadeOut(0.5+"s");
 });
 $(document).ready(function() {
+	$(function() {
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+				}
+			}
+		});
+	});
 	particlesJS ({
 	"particles": {
 		"number": {
@@ -181,45 +193,44 @@ $(document).ready(function() {
 	$(".button").click(function workSlide(slides, buttons));*/
 	$(".button:nth-child(1)").click(function() {
 		$(".slide").queue(function() {
-			$(".slide").animate({
+			$(".slide").velocity({
 				right: "90vw"
 			}).dequeue();
 		});
-		$(".slide:nth-child(1)").animate({
+		$(".slide:nth-child(1)").velocity({
 			right: "0"
 		});
 	});
 	$(".button:nth-child(2)").click(function() {
 		$(".slide").queue(function() {
-			$(".slide").animate({
+			$(".slide").velocity({
 				right: "90vw"
 			}).dequeue();
 		});
-		$(".slide:nth-child(2)").animate({
+		$(".slide:nth-child(2)").velocity({
 			right: "0"
 		});
 	});
 	$(".button:nth-child(3)").click(function() {
 		$(".slide").queue(function() {
-			$(".slide").animate({
+			$(".slide").velocity({
 				right: "90vw"
 			}).dequeue();
 		});
-		$(".slide:nth-child(3)").animate({
+		$(".slide:nth-child(3)").velocity({
 			right: "0"
 		});
 	});
 	$(".button:nth-child(4)").click(function() {
 		$(".slide").queue(function() {
-			$(".slide").animate({
+			$(".slide").velocity({
 				right: "90vw"
 			}).dequeue();
 		});
-		$(".slide:nth-child(4)").animate({
+		$(".slide:nth-child(4)").velocity({
 			right: "0"
 		});
 	});
-	
 	var colors = new Array(
 		[62,35,255],
 		[60,255,60],
@@ -279,54 +290,102 @@ $(document).ready(function() {
 	setInterval(updateGradient,10);
 	$(".hubClick:nth-child(1)").click(function() {
 		$(".hub").children().queue(function() {
-			$(this).animate({
+			$(this).velocity({
 				top: "80vh"
 			}).dequeue();
 		});
-		$(".html").animate({
+		$(".html").velocity({
 			top: "15vh"
 		});
 	});
 	$(".hubClick:nth-child(2)").click(function() {
 		$(".hub").children().queue(function() {
-			$(this).animate({
+			$(this).velocity({
 				top: "80vh"
 			}).dequeue();
 		});
-		$(".css").animate({
+		$(".css").velocity({
 			top: "15vh"
 		});
 	});
 	$(".hubClick:nth-child(3)").click(function() {
 		$(".hub").children().queue(function() {
-			$(this).animate({
+			$(this).velocity({
 				top: "80vh"
 			}).dequeue();
 		});
-		$(".js").animate({
+		$(".js").velocity({
 			top: "15vh"
 		});
 	});
-	$('a[href*=#]').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var $target = $(this.hash);
-			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-			if ($target.length) {
-				var targetOffset = $target.offset().top;
-				$('html,body')
-				.animate({scrollTop: targetOffset}, 500);
-				return false;
+	$("#qBOne").click(function() {
+		$(".quotes").animate({
+			left: "100vw"
+		}, 500);
+		$(".quoted").animate({
+			left: "-100vw"
+		}, 300);
+	});
+	$("#qBTwo").click(function() {
+		$(".quotes").animate({
+			left: "0"
+		}, 500);
+	});
+	$("#qBThree").click(function() {
+		$(".quotes").animate({
+			left: "-100vw"
+		}, 500);
+	});
+	$(".slideLeft").click(function() {
+		$(".quotes").poisiton();
+	});
+	$(".input:nth-child(5)").addClass("send");
+	$(".submit").click(function() {
+		var proceed = true;
+		$("input:nth-child(1)[required=true], input:nth-child(2)[required=true]").each(function() {
+			$(this).removeClass("bad");
+			if(!$.trim($(this).val())) {
+				$(this).addClass("bad");
+				proceed = false;
 			}
+			var emailValid = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			if($(this).attr("type")=="email" && !emailValid.test($trim($(this).val()))){
+				$(this).addClass("bad");
+				proceed = false;
+			}
+		});
+		if (proceed) {
+			var iData = new FormData();
+			iData.append('name', $('input[name=name]').val());
+			iData.append('email', $('input[name=email]').val());
+			iData.append('phone', $('input[name=phone]').val());
+			iData.append('skype', $('input[name=skype]').val());
+			iData.append('message', $('input[name=message]').val());
+			$.ajax({
+				url: '../php/sendEmail.php',
+				data: iData,
+				processData: false,
+				contentType: false,
+				type: 'POST',
+				dataType: 'json',
+				success: function(response) {
+					if(response.type == 'error') {
+						output = $(".submit").addClass("error");
+					} else {
+						output = $(".submit").addClass("sent");
+					}
+				}
+			});
 		}
 	});
-	$(form).submit(function(event) {
+	/*$(form).submit(function(event) {
 		event.preventDefault();
 		var formData = $(form).serialize();
 		var form = $("#contactForm");
 		var sending = $(".sending");
 		var sent = $(".sent");
 		var error = $(".error");
-		$(this).validate({
+		formData.validate({
 			rules:{
 				name:"required",
 				email:{
@@ -338,7 +397,8 @@ $(document).ready(function() {
 				name:"Don't forget your name.",
 				email:"Don't forget your email."
 			}
-		}).ajax({
+		});
+		formData.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
 			data: formData
@@ -354,7 +414,7 @@ $(document).ready(function() {
 			$(".submit").removeClass('sent');
 			$(".submit").addClass('error');
 		});
-	});
+	});*/
 		/*}).ajax({
 			method: "POST",
 			url: "../php/sendEmail.php",
